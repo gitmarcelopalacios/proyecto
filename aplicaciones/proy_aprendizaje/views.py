@@ -12,5 +12,5 @@ class PruebaView(TemplateView):
 class PruebaListView(ListView):
     template_name = "home/VistaListView.html"
     context_object_name = "listaNumeros"
-    queryset = ['Fabricio', 'José', 'Gerardo', 'Leandro']
+    queryset = ['AppReloj', 'AppAcute', 'AppPuertas', 'AppMuni']
     

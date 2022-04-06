@@ -7,11 +7,12 @@ from . import views
 # REGISTRO AQUI MI MODELO
 from django.apps import AppConfig
 
-class HomeConfig(AppConfig):
+class Proy_aprendizajeConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'aplicaciones.home'
+    name = 'aplicaciones.proy_aprendizaje'
     
 urlpatterns = [
-    path('vistatemplate/', views.PruebaView.as_view()),
-    path('listatemplate/', views.PruebaListView.as_view()),
+    path('proyvistatemplate/', views.PruebaView.as_view()),
+    path('proylistatemplate/', views.PruebaListView.as_view()),
 ]
+

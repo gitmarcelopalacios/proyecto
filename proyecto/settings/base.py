@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'aplicaciones.emprendedor',
     'aplicaciones.empresa',
     'aplicaciones.home',
+    'aplicaciones.proy_aprendizaje',
 ]
 
 MIDDLEWARE = [
