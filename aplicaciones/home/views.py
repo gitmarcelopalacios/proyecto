@@ -7,10 +7,10 @@ from django.views.generic.list import ListView
 
 
 class PruebaView(TemplateView):
-    template_name = "home/VistaTemplateView.html"
+    template_name = "home/ClienteTemplateView.html"
 
 class PruebaListView(ListView):
-    template_name = "home/VistaListView.html"
-    context_object_name = "listaNumeros"
-    queryset = ['Fabricio', 'José', 'Gerardo', 'Leandro']
+    template_name = "home/ClienteListView.html"
+    context_object_name = "listaClientes"
+    queryset = ['Herrera', 'Viotti', 'Almada', 'Bertero']
     
