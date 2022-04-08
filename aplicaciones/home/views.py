@@ -9,8 +9,8 @@ from django.views.generic.list import ListView
 class PruebaView(TemplateView):
     template_name = "home/ClienteTemplateView.html"
 
-class PruebaListView(ListView):
-    template_name = "home/ClienteListView.html"
-    context_object_name = "listaClientes"
-    queryset = ['Herrera', 'Viotti', 'Almada', 'Bertero']
+# class PruebaListView(ListView):
+#     template_name = "home/ClienteListView.html"
+#     context_object_name = "listaClientes"
+#     queryset = ['Herrera', 'Viotti', 'Almada', 'Bertero']
     

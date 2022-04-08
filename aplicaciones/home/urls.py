@@ -12,6 +12,6 @@ class HomeConfig(AppConfig):
     name = 'aplicaciones.home'
     
 urlpatterns = [
-    path('vistatemplate/', views.PruebaView.as_view()),
-    path('listatemplate/', views.PruebaListView.as_view()),
+#    path('vistatemplate/', views.PruebaView.as_view()),
+#    path('listatemplate/', views.PruebaListView.as_view()),
 ]
