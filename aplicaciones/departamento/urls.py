@@ -1,12 +1,8 @@
-from django.contrib import admin
-from django.contrib import auth
-from django.urls import path
-
-#from proyecto.aplicaciones.departamento.models import Departamento 
-
-# IMPORTO EL PAQUETE DE VISTA
 from . import views
-#from proyecto.aplicaciones.departamento.models import Departamento 
+from django.contrib import admin
+from django.urls import path
+# IMPORTO EL PAQUETE DE VISTA
+from .models import Departamento
 
 # REGISTRO AQUI MI MODELO
 from django.apps import AppConfig

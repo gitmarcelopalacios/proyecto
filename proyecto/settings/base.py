@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'aplicaciones.urlx',
     'aplicaciones.departamento',
     'aplicaciones.empleado',
+    'aplicaciones.persona',
 ]
 
 MIDDLEWARE = [

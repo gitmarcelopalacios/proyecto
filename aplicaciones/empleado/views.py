@@ -8,30 +8,30 @@ from django.views.generic.edit import CreateView
 
 
 
-class ClaseDepartamentoTemplateView(TemplateView):
-    template_name = "departamento/DepartamentoTemplateView.html"
+class ClaseEmpleadoTemplateView(TemplateView):
+    template_name = "empleado/DepartamentoTemplateView.html"
 
-class ClaseDepartamentoListView1(ListView):
-    template_name = "departamento/DepartamentoListView1.html"
+class ClaseEmpleadoListView1(ListView):
+    template_name = "empleado/ListView.html"
     context_object_name = "lista"
     queryset = ['Contabilidad', 'Marketing','Finanzas','Inventario','Compras']
 
-class ClaseDepartamentoListView2(ListView):
-    template_name = "departamento/DepartamentoListView2.html"
+class ClaseEmpleadoListView2(ListView):
+    template_name = "empleado/ListView.html"
     context_object_name = "lista"
     queryset = ['Contabilidad', 'Marketing','Finanzas','Inventario','Compras']
 
-class ClaseDepartamentoListar(ListView):
-    from .models import Departamento 
-    template_name = "departamento/DepartamentoListView2.html"
-    model = Departamento
+class ClaseEmpleadoListar(ListView):
+    from .models import Empleado
+    template_name = "empleado/ListView.html"
+    model = Empleado
     context_object_name = "lista"
     
-class ClaseDepartamentoCreateView(CreateView):
+class ClaseEmpleadoCreateView(CreateView):
     from django.views.generic.edit import CreateView
-    #template_name = "departamento/departamentocreateview.html"
-    template_name = "departamento/createview.html"
-    from .models import Departamento 
-    model = Departamento
+    #template_name = "Empleado/empleadocreateview.html"
+    template_name = "Empleado/createview.html"
+    from .models import Empleado
+    model = Empleado
     fields = ["nombre"]
     
