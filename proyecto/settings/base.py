@@ -28,13 +28,20 @@ INSTALLED_APPS = [
     'aplicaciones.emprendedor',
     'aplicaciones.empresa',
     'aplicaciones.home',
-    'aplicaciones.proy_aprendizaje',
     'aplicaciones.cliente',
     'aplicaciones.proveedor',
     'aplicaciones.urlx',
     'aplicaciones.departamento',
     'aplicaciones.empleado',
     'aplicaciones.persona',
+    'aplicaciones.tipo_documento',
+    'aplicaciones.condicion_iva',
+    'aplicaciones.cuenta',
+    'aplicaciones.detalle_cuenta',
+    'aplicaciones.tarea',
+    'aplicaciones.estado_tarea',
+    'aplicaciones.proyecto_tarea',
+    #'aplicaciones.',
 ]
 
 MIDDLEWARE = [

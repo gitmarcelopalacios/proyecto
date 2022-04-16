@@ -1,7 +1,15 @@
 from django.db import models
-
-# Create your models here.
+#from aplicaciones.emprendedor.models import Emprendedor
+from aplicaciones.empresa.models import Empresa
 class Proy_aprendizaje(models.Model):
-    nombre=models.CharField(max_length=200)
+    # JOB_CHOICES = ( 
+    #                ('0', 'Contador'),
+    #                ('1', 'Administrador'),
+    #                ('2', 'Economista'),
+    #                ('3', 'Otro'),
+    #                )
+    emprendedor=models.ForeignKey(Emprendedor, on_delete=models.CASCADE, default=1)
+    empresa=models.ForeignKey(Empresa, on_delete=models.CASCADE, default=1)
+    
     def __str__(self):
-        return self.nombre
+        return str(self.id)+" - "+str(self.emprendedor)+" - "+str(self.empresa)

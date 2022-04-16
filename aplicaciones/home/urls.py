@@ -12,6 +12,7 @@ class HomeConfig(AppConfig):
     name = 'aplicaciones.home'
     
 urlpatterns = [
+   path('seba/', views.EjecutoVista.as_view()),
    path('prueba/', views.PruebaView.as_view()),
    path('lista/', views.PruebaListView.as_view()),
    path('lista-prueba/', views.ListarPrueba.as_view()),

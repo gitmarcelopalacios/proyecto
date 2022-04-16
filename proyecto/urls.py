@@ -31,4 +31,6 @@ urlpatterns = [
     path('', include("aplicaciones.departamento.urls")),
     path('', include("aplicaciones.empleado.urls")),
     path('', include("aplicaciones.persona.urls")),
+    path('', include("aplicaciones.cuenta.urls")),
+    path('', include("aplicaciones.detalle_cuenta.urls")),
          ]
