@@ -1,27 +1,21 @@
 from django.db import models
-from aplicaciones.cuenta.models import Cuenta
+from aplicaciones.estado_tarea.models import Estado_Tarea
+from aplicaciones.proyecto_tarea.models import Proyecto_Tarea
 
-def str_fix(string,  lenght):
-    rest = ' ' * 1200
-    string_out = string + rest
-    return string_out[0:lenght]
-
-
-
-
-class Detalle_Cuenta(models.Model):
+class Tarea(models.Model):
     fecha = models.DateField('Fecha:', auto_now=False, auto_now_add=True)
-    idasiento = models.IntegerField(verbose_name='Asiento:', default=0)
-    idcuenta=models.ForeignKey(Cuenta, on_delete=models.CASCADE, default=1)
-    referencia=models.CharField('Referencia:', max_length=200)
-    importe = models.DecimalField('Débito/Crédito:', max_digits=10, decimal_places=2)
-    observaciones=models.CharField('Observaciones:',max_length=20,default=' ')   
+    id_proyecto_tarea=models.ForeignKey(Proyecto_Tarea, on_delete=models.CASCADE, default=1)
+    id_estado_tarea=models.ForeignKey(Estado_Tarea, on_delete=models.CASCADE, default=1)
+    detalle=models.CharField('Detalle:', max_length=200)
+    observaciones=models.CharField('Observaciones:',max_length=20,default='')   
     
     def __str__(self):
-        return (str_fix(str(self.id),10)+'   '
-               +str_fix(str(self.idasiento),10)+'   '
-               +self.fecha.strftime('%d/%m/%Y')+'   '
-               +str_fix(str(self.idcuenta),150)+'   '
-               +str_fix(self.referencia,300)+'          '
-               +str(self.importe))
+        return (
+            str(self.id) + '   ' + 
+            str(self.id_proyecto_tarea) + '   ' + 
+            str(self.id_estado_tarea) + '   ' + 
+            str(self.detalle) + '   ' + 
+            self.observaciones
+        )
+                
 

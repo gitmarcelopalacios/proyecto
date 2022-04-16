@@ -24,7 +24,6 @@ urlpatterns = [
     path('', include("aplicaciones.emprendedor.urls")),
     path('', include("aplicaciones.empresa.urls")),
     path('', include("aplicaciones.home.urls")),
-    path('', include("aplicaciones.proy_aprendizaje.urls")),
     path('', include("aplicaciones.cliente.urls")),
     path('', include("aplicaciones.proveedor.urls")),
     path('', include("aplicaciones.urlx.urls")),
@@ -33,4 +32,7 @@ urlpatterns = [
     path('', include("aplicaciones.persona.urls")),
     path('', include("aplicaciones.cuenta.urls")),
     path('', include("aplicaciones.detalle_cuenta.urls")),
-         ]
+    # path('', include("aplicaciones.estado_tarea.urls")),
+    # path('', include("aplicaciones.tarea.urls")),
+    # path('', include("aplicaciones.proyecto_tarea.urls")),
+]

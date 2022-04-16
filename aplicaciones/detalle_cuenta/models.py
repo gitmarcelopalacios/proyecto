@@ -10,9 +10,9 @@ def str_fix(string,  lenght):
 
 
 class Detalle_Cuenta(models.Model):
-    fecha = models.DateField('Fecha:', auto_now=False, auto_now_add=True)
     idasiento = models.IntegerField(verbose_name='Asiento:', default=0)
     idcuenta=models.ForeignKey(Cuenta, on_delete=models.CASCADE, default=1)
+    fecha = models.DateField('Fecha:', auto_now=False, auto_now_add=False)
     referencia=models.CharField('Referencia:', max_length=200)
     importe = models.DecimalField('Débito/Crédito:', max_digits=10, decimal_places=2)
     observaciones=models.CharField('Observaciones:',max_length=20,default=' ')   
