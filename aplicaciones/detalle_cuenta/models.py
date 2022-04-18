@@ -18,10 +18,10 @@ class Detalle_Cuenta(models.Model):
     observaciones=models.CharField('Observaciones:',max_length=20,default=' ')   
     
     def __str__(self):
-        return (str_fix(str(self.id),10)+'   '
-               +str_fix(str(self.idasiento),10)+'   '
-               +self.fecha.strftime('%d/%m/%Y')+'   '
-               +str_fix(str(self.idcuenta),150)+'   '
-               +str_fix(self.referencia,300)+'          '
+        return (str_fix(str(self.id),10)+' - '
+               +str_fix(str(self.idasiento),10)+' - '
+               +self.fecha.strftime('%d/%m/%Y')+' - '
+               +str_fix(str(self.idcuenta),150)+' --> '
+               +str_fix(self.referencia,300)+' :         '
                +str(self.importe))
 

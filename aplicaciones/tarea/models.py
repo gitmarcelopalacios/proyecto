@@ -11,10 +11,10 @@ class Tarea(models.Model):
     
     def __str__(self):
         return (
-            str(self.id) + '   ' + 
-            str(self.id_proyecto_tarea) + '   ' + 
-            str(self.id_estado_tarea) + '   ' + 
-            str(self.detalle) + '   ' + 
+            str(self.id) + ' - ' + 
+            str(self.id_proyecto_tarea) + ' - ' + 
+            str(self.id_estado_tarea) + ' - ' + 
+            str(self.detalle) + ' - ' + 
             self.observaciones
         )
                 
